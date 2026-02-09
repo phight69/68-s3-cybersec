@@ -1,5 +1,7 @@
+version: "3.8"
+
 services:
-  s${X}app:
+  app:
     image: your-app-image
     container_name: 68-s${X}-app
     env_file:
