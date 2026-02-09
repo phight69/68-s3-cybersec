@@ -1,0 +1,9 @@
+services:
+  s${X}app:
+    image: your-app-image
+    container_name: 68-s${X}-app
+    env_file:
+      - .env
+    ports:
+      - "${APP_PORT}:8080"
+    restart: unless-stopped
