@@ -1,15 +1,12 @@
-version: "3.8"
-
 services:
-  s${X}admin:
+  s3admin:
     image: dpage/pgadmin4
-    container_name: 68-s${X}-admin
+    container_name: 68-s3-admin
     env_file:
       - .env
     environment:
       PGADMIN_DEFAULT_EMAIL: ${PGADMIN_DEFAULT_EMAIL}
       PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_DEFAULT_PASSWORD}
     ports:
-      - "${PGADMIN_PORT}:80"
-
+      - "5050:80"
     restart: unless-stopped
