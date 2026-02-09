@@ -1,10 +1,9 @@
 services:
-  s3app:
-    image: node:20
-    container_name: 68-s3-app
-    working_dir: /app
-    volumes:
-      - ./app:/app
-    command: npm run develop
+  s{X}app:
+    image: prawee/strapi
+    container_name: 68-s${X}-app
     ports:
-      - "1337:1337"
+      - "${APP_PORT}:1337"
+    environment:
+      NODE_ENV: development
+    restart: always
