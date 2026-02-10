@@ -1,0 +1,9 @@
+services:
+  s{X}app:
+    image: prawee/strapi
+    container_name: 68-s${X}-app
+    ports:
+      - "${APP_PORT}:1337"
+    environment:
+      NODE_ENV: development
+    restart: always

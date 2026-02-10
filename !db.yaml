@@ -1,0 +1,10 @@
+services:
+  s3db:
+    image: postgres:latest
+    container_name: 68-s3-database
+    environment:
+     POSTGRES_USER: ${POSTGRES_USER}
+     POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+     POSTGRES_DB: ${POSTGRES_DB}
+    ports:
+      - "${PORT}:5432"
